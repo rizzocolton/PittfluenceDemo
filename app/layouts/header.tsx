@@ -14,7 +14,8 @@ export default function Header() {
           </Link>
           <div className="flex gap-6">
             <Link to="/" className="hover:text-blue-400">Home</Link>
-            <Link to="/about" className="hover:text-blue-400">About</Link>
+            <Link to="about" className="hover:text-blue-400">About</Link>
+            <Link to="login" className="hover:text-blue-400">Login</Link>
           </div>
         </div>
       </nav>
