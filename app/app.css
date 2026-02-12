@@ -7,11 +7,11 @@
   
   /* Colors */
 
-  /* Primary */
+  /* Light Pitt */
   --color-pitt-blue: #003594;
   --color-pitt-gold: #FFB81C;
 
-  /* Secondary */
+  /* Dark Pitt */
   --color-pitt-navy: #00205B;
   --color-pitt-bronze: #B87333;
 }
@@ -23,4 +23,10 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+}
+
+* {
+  transition-property: color, background-color;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
 }
