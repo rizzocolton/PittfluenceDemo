@@ -1,8 +1,19 @@
 @import "tailwindcss";
 
 @theme {
+  /* Fonts */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  /* Colors */
+
+  /* Primary */
+  --color-pitt-blue: #003594;
+  --color-pitt-gold: #FFB81C;
+
+  /* Secondary */
+  --color-pitt-navy: #00205B;
+  --color-pitt-bronze: #B87333;
 }
 
 html,
