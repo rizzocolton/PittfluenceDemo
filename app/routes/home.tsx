@@ -1,4 +1,5 @@
 import type { Route } from "./+types/home";
+import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,5 +9,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <></>;
+  return(
+  <div className="">
+    <button>
+      <Link to="docs"> Go to Docs </Link>
+    </button>
+  </div>
+  );
 }
