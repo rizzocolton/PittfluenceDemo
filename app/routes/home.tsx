@@ -10,8 +10,8 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return(
-  <div className="">
-    <button>
+  <div>
+    <button className="text-5xl px-4 py-2 cursor-pointer bg-pitt-blue dark:bg-pitt-navy text-pitt-gold dark:text-pitt-bronze font-medium hover:border-2">
       <Link to="docs"> Go to Docs </Link>
     </button>
   </div>
