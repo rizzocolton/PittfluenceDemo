@@ -45,9 +45,11 @@ export default function Sidebar({
                         </div>
                         <nav className="flex flex-col gap-2">
                             {documents.map((document)=>(
+                                <Link to={`/docs/${document.id}`}>
                                 <button className="text-left w-full px-4 py-2 border-2 cursor-pointer hover:font-bold">
                                     {document.id}
                                 </button>
+                                </Link>
                             ))}
                         </nav>
                     </div>

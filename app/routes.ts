@@ -7,7 +7,7 @@ export default [
     ]),
     layout("layouts/sidebar.tsx",[
         route("docs","routes/docs.tsx",[
-            route("docs/:docId","./doc.tsx")
+            route(":docId","./doc.tsx")
         ])
     ]),
     route("login", "routes/login.tsx")
