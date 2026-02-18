@@ -1,8 +1,19 @@
 import { Outlet, Link } from "react-router";
 import { useState } from "react"
+import { getDocuments } from "../data"
 
-export default function Sidebar() {
+import type {Route} from "../../.react-router/types/app/layouts/+types/sidebar"
+
+export async function loader(){
+    const documents=await getDocuments();
+    return { documents };
+}
+
+export default function Sidebar({
+    loaderData
+}: Route.ComponentProps) {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const {documents}=loaderData;
 
   return (
     <div className="flex flex-col h-screen">
@@ -32,18 +43,13 @@ export default function Sidebar() {
                                 className="w-full px-4 py-2 border-2" 
                             />
                         </div>
-                        <div className="flex flex-col gap-2">
-                            <button
-                                className="text-left w-full px-4 py-2  border-2 cursor-pointer hover:font-bold"
-                            >
-                                Document 1 {/* Can be replaced with doc name var */}
-                            </button>
-                            <button
-                                className="text-left w-full px-4 py-2  border-2 cursor-pointer hover:font-bold"
-                            >
-                                Document 2 {/* Can be replaced with doc name var */}
-                            </button>
-                        </div>
+                        <nav className="flex flex-col gap-2">
+                            {documents.map((document)=>(
+                                <button className="text-left w-full px-4 py-2 border-2 cursor-pointer hover:font-bold">
+                                    {document.id}
+                                </button>
+                            ))}
+                        </nav>
                     </div>
                 )}
             </nav>
